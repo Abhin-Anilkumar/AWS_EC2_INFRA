@@ -5,7 +5,10 @@ terraform {
       version = "3.66.0"
     }
   }
+
+  required_version = ">= 1.3.0"
 }
- module "vpc" {
-   source = "./modules/vpc"
- }
+
+provider "aws" {
+  region = var.aws_region
+}
