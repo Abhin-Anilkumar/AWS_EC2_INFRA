@@ -7,10 +7,7 @@ module "VPC" {
   private_subnets = ["10.0.3.0/24", "10.0.4.0/24"]
   enable_nat_gateway = true
   azs = ["us-east-1"]
-  tags = {
-  "Name" = "myvpc" 
-}
-  
+
 }
 
 module "ec2" {
@@ -27,8 +24,5 @@ module "ec2" {
   # disable_api_termination    = true                     # Enable termination protection
   # iam_instance_profile       = "ec2-iam-role-profile"   # Attach IAM Role
   # placement_group            = "example-placement-group" 
-  tags = {
-  "Name" = "instance" 
-}
   depends_on = [module.VPC]
 }
