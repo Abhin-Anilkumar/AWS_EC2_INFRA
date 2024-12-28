@@ -22,7 +22,6 @@ module "ec2" {
   subnet_id         = module.VPC.public_subnets[0]
   ami =  "ami-0657605d763ac72a8"
   associate_public_ip_address = true
-  availability_zone = ["us-west-1"]
   # key_name          = ""
   # monitoring          = true                     # Enable detailed monitoring
   # disable_api_termination    = true                     # Enable termination protection
