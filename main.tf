@@ -23,6 +23,10 @@ module "ec2" {
   ami =  "ami-0657605d763ac72a8"
   associate_public_ip_address = true
   key_name          = "abhin.pem"
+  monitoring          = true                     # Enable detailed monitoring
+  disable_api_termination    = true                     # Enable termination protection
+  iam_instance_profile       = "ec2-iam-role-profile"   # Attach IAM Role
+  placement_group            = "example-placement-group" 
   tags = {
   "Name" = "instance" 
 }
