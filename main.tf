@@ -6,7 +6,7 @@ module "VPC" {
   public_subnets  = ["10.0.1.0/24", "10.0.2.0/24"]
   private_subnets = ["10.0.3.0/24", "10.0.4.0/24"]
   enable_nat_gateway = true
-  azs = ["us-west-1"]
+  azs = ["us-west-1b", "us-west-1c"]
   tags = {
   "Name" = "myvpc" 
 }
