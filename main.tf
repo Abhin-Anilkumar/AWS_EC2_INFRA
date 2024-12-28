@@ -30,5 +30,5 @@ module "ec2" {
   tags = {
   "Name" = "instance" 
 }
-
+  depends_on = [module.VPC]
 }
