@@ -22,7 +22,7 @@ module "ec2" {
   subnet_id         = module.VPC.public_subnets[0]
   ami =  "ami-0657605d763ac72a8"
   associate_public_ip_address = true
-  key_name          = "abhin.pem"
+  key_name          = ""
   monitoring          = true                     # Enable detailed monitoring
   disable_api_termination    = true                     # Enable termination protection
   iam_instance_profile       = "ec2-iam-role-profile"   # Attach IAM Role
