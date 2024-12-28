@@ -20,6 +20,7 @@ module "ec2" {
   instance_type     = "t3.micro"
   ami_ssm_parameter = "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
   subnet_id         = module.VPC.public_subnets[0]
+  ami =  "ami-0657605d763ac72a8"
   associate_public_ip_address = true
   key_name          = "abhin.pem"
   tags = {
