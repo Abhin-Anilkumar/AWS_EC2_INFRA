@@ -5,6 +5,11 @@ module "VPC" {
   name = "abhin-test"
 }
 
+module "subnet_public1" {
+  source = "./modules/Subnet"
+  vpc_id = module.VPC.vpc_id
+  subnet_cidr = "10.0.1.0/24"
+}
 # module "ec2" {
 #   source = "./modules/EC2"
 #   create            = true
