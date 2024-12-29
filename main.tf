@@ -1,12 +1,8 @@
 module "VPC" {
   source = "./modules/vpc"
-  name            = "my-vpc"
-  cidr            = "10.0.0.0/16"
-  # public_subnets  = ["10.0.1.0/24", "10.0.2.0/24"]
-  # private_subnets = ["10.0.3.0/24", "10.0.4.0/24"]
-  # enable_nat_gateway = true
-  # azs = ["us-west-1b", "us-west-1c"]
-
+  cidr_block =             "10.0.0.0/16"
+  instance_tenancy = "default"
+  name = "abhin-test"
 }
 
 # module "ec2" {
