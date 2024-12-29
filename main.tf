@@ -10,6 +10,25 @@ module "subnet_public1" {
   vpc_id = module.VPC.vpc_id
   subnet_cidr = "10.0.1.0/24"
 }
+
+module "subnet_public2" {
+  source = "./modules/Subnet"
+  vpc_id = module.VPC.vpc_id
+  subnet_cidr = "10.0.2.0/24"
+}
+
+module "subnet_private1" {
+  source = "./modules/Subnet"
+  vpc_id = module.VPC.vpc_id
+  subnet_cidr = "10.0.3.0/24"
+}
+
+module "subnet_private2" {
+  source = "./modules/Subnet"
+  vpc_id = module.VPC.vpc_id
+  subnet_cidr = "10.0.4.0/24"
+}
+
 # module "ec2" {
 #   source = "./modules/EC2"
 #   create            = true
