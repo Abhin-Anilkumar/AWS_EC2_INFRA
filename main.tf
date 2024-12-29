@@ -33,6 +33,11 @@ module "subnet_private2" {
   subnet_name = "${var.subnet_name}-private2"
 }
 
+module "aws_internet_gateway" {
+  source = "./modules/internet-gateway"
+  vpc_id = module.VPC.vpc_id
+  gw_name = var.gw_name
+}
 # module "ec2" {
 #   source = "./modules/EC2"
 #   create            = true
