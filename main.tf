@@ -2,31 +2,35 @@ module "VPC" {
   source = "./modules/vpc"
   cidr_block =             "10.0.0.0/16"
   instance_tenancy = "default"
-  name = "abhin-test"
+  name = var.name
 }
 
 module "subnet_public1" {
   source = "./modules/Subnet"
   vpc_id = module.VPC.vpc_id
   subnet_cidr = "10.0.1.0/24"
+  subnet_name = var.subnet_name
 }
 
 module "subnet_public2" {
   source = "./modules/Subnet"
   vpc_id = module.VPC.vpc_id
   subnet_cidr = "10.0.2.0/24"
+  subnet_name = var.subnet_name
 }
 
 module "subnet_private1" {
   source = "./modules/Subnet"
   vpc_id = module.VPC.vpc_id
   subnet_cidr = "10.0.3.0/24"
+  subnet_name = var.subnet_name
 }
 
 module "subnet_private2" {
   source = "./modules/Subnet"
   vpc_id = module.VPC.vpc_id
   subnet_cidr = "10.0.4.0/24"
+  subnet_name = var.subnet_name
 }
 
 # module "ec2" {
