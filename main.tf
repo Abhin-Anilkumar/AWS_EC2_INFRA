@@ -9,28 +9,28 @@ module "subnet_public1" {
   source = "./modules/Subnet"
   vpc_id = module.VPC.vpc_id
   subnet_cidr = "10.0.1.0/24"
-  subnet_name = var.subnet_name
+  subnet_name = "${var.subnet_name}-public1"
 }
 
 module "subnet_public2" {
   source = "./modules/Subnet"
   vpc_id = module.VPC.vpc_id
   subnet_cidr = "10.0.2.0/24"
-  subnet_name = var.subnet_name
+  subnet_name = "${var.subnet_name}-public2"
 }
 
 module "subnet_private1" {
   source = "./modules/Subnet"
   vpc_id = module.VPC.vpc_id
   subnet_cidr = "10.0.3.0/24"
-  subnet_name = var.subnet_name
+  subnet_name = "${var.subnet_name}-private1"
 }
 
 module "subnet_private2" {
   source = "./modules/Subnet"
   vpc_id = module.VPC.vpc_id
   subnet_cidr = "10.0.4.0/24"
-  subnet_name = var.subnet_name
+  subnet_name = "${var.subnet_name}-private2"
 }
 
 # module "ec2" {
