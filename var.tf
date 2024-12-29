@@ -5,5 +5,4 @@ variable "name" {
 
 variable "subnet_name" {
   type = string
-  default = try(aws_subnet)
 }
