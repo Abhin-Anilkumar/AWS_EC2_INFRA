@@ -22,7 +22,6 @@ resource "aws_subnet" "stw_subnet_private_1" {
   availability_zone = "eu-west-1a"
 
   tags = {
-    group = var.stack_name
     Name  = "stw_subnet_private_1"
   }
 }
