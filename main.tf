@@ -85,7 +85,7 @@ resource "aws_eip" "stw_eip" {
 }
 
 
-resource "aws_route_table" "stw_rt_public" {
+resource "aws_route_table" "stw_rt_private" {
   vpc_id = aws_vpc.stw_vpc.id
 
   route {
