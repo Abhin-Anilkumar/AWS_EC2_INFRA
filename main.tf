@@ -1,3 +1,13 @@
+resource "aws_vpc" "stw_vpc" {
+  cidr_block = "10.0.0.0/16"
+
+  tags = {
+    Name  = "stw_vpc"
+  }
+}
+
+
+
 resource "aws_internet_gateway" "stw_gw" {
   vpc_id = aws_vpc.stw_vpc.id
 
